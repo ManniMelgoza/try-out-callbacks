@@ -30,25 +30,25 @@ for (let value of array) {
 return newArr;
 };
 
-// let arrStr = function(array){
+let arrStr = function(array){
 
-// for (let el in array) {
-//     // console.log(array);
-//      return array.toLowerCase();
-//     }
-// };
-
-let arrNum = function(array) {
-    for (let el in array) {
-        console.log(el)
-        // let elValue = array[el];
-        // console.log('Multiply', array[el] * 10);
+for (let el in array) {
+    // console.log(array);
+     return array.toLowerCase();
     }
 };
 
-console.log(myMap([ 10, 5, 9, 8 ], arrNum));   // [ 10, 5, 9, 8 ]
+// let arrNum = function(array) {
+//     for (let el in array) {
+//         console.log(el)
+//         // let elValue = array[el];
+//         // console.log('Multiply', array[el] * 10);
+//     }
+// };
+
+// console.log(myMap([ 10, 5, 9, 8 ], arrNum));   // [ 10, 5, 9, 8 ]
 // console.log(arrNum([ 10, 5, 9, 8 ]));   // [ 10, 5, 9, 8 ]
-// console.log(myMap([ 'RUN!', 'FORREST!' ], arrStr));   // [ 'RUN!', 'FORREST!' ]
+console.log(myMap([ 'RUN!', 'FORREST!' ], arrStr));   // [ 'RUN!', 'FORREST!' ]
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
     module.exports = myMap;
