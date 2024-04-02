@@ -14,16 +14,30 @@ myForEach(['a', 'b', 'c'], function (el, i) {
 // b is at index 1
 // c is at index 2
 
-let test = [];
-myForEach(['laika', 'belka'], function (el) {
-    test.push(el.toUpperCase());
-});
-console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
+// let test = [];
 
 function myForEach(array, cb) {
-    // Your code here 
+    // Your code here
+    for(let value of array){
+        const elIndex = cb(value);
+    }
 }
+
+let arrIndex = function(array) {
+
+    for(let el in array){
+        console.log(array[el] + ' is at index ' + el);
+    }
+}
+// console.log(myForEach(['LAIKA', 'BELKA'], arrIndex)); // ['LAIKA', 'BELKA']
+// console.log(arrIndex(['LAIKA', 'BELKA'])); // ['LAIKA', 'BELKA']
+
+
+// myForEach(['laika', 'belka'], function (el) {
+//     test.push(el.toUpperCase());
+// });
+// console.log(test); // ['LAIKA', 'BELKA']
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
