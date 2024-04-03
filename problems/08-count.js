@@ -26,10 +26,27 @@ let result4 = count(['follow', 'the', 'yellow', 'brick', 'road'], function (str)
 console.log(result4); // 0
 *******************************************************************************/
 
-function count(array, cb) {
-  // Your code here 
-}
+// Requires a count of how many elements in the array meet the condition
+// specified in the callback function.
 
+function count(array, cb) {
+  let count = 0;
+  
+  for (let i = 0; i < array.length; i++) {
+  let el = array[i].toLowerCase();
+  if(cb(el)) {
+      count++
+  }
+  }
+  return count;
+    }
+  
+  let includesB = (word) => {
+  return word.includes("b")
+  }
+   
+  console.log(count(["Beach", "bologna", "berry", "bone", "poll"], includesB));
+  
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = count;

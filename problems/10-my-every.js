@@ -21,9 +21,25 @@ console.log(myEvery(['book', 'door'], hasO));           // true
 console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
 *******************************************************************************/
 
+// Function will determine if all numbers in an array are odd;
 function myEvery(array, cb) {
-    // Your code here 
+        
+   for (let i = 0; i < array.length; i++) {
+    const el = array[i]
+    let odd = cb(el);
+    if(odd === false) {
+        return false;
+    }
+    
 }
+return true;
+}
+
+let isOdd = function(num) {
+   return num % 2 !== 0
+}    
+
+console.log(myEvery([1,3,5,7], isOdd));
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

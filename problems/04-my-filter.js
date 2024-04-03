@@ -21,13 +21,24 @@ console.log(result2);      // ['choose', 'words', 'only']
 
 
 
+// Find only odd numbers
 function myFilter(array, cb) {
-let newArr = [];
-
-
-
-
+    let newArr = [];
+    
+    for (let el in array) {
+        let elements = array[el];
+       if(cb(elements)) newArr.push(elements)
+    }
+    return newArr;
+    
+    }
+    
+let isOdd = function(num) {
+    return num % 2 !== 0;
 }
+
+
+   console.log(myFilter([1,2,3,4,5], isOdd))
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

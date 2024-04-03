@@ -27,6 +27,7 @@ console.log(result3); // hi!!!!!
 
 function multiMap(val, n, cb) {
   for (let i = 0; i < n; i++) {
+    //Have "num * 10" be the new value on each iteration.
     val = cb(val) 
   }
   return val

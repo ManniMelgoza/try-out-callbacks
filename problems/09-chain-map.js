@@ -29,9 +29,43 @@ console.log(chainMap(4, square, half));         // 8
 console.log(chainMap(4, half, square));         // 4
 *******************************************************************************/
 
+// Start with an argument, and manipulate the argument up to three ways using callbacks.
+    // The argument permutation should occur only after sequentially
+    // passing through callback functions
+
+
 function chainMap(val, ...callbacks) {
-  // Your code here 
+  
+
+// for (let i = 0; i < val.length; i++) {
+        // let el = val[i];
+      // return callbacks(val)
+
+        // let val1 = lowerCase(val);
+        // let val2 = firstUpper(val1);
+        // let val3 = exclamation(val2)
+
+       val = lowerCase(val);
+        val =firstUpper(val);
+       return  val = exclamation(val);
+
+    // }
+
+  
 }
+  function lowerCase(word) {
+    return word.toLowerCase()
+  }
+
+  function firstUpper(word){
+    return word[0].toUpperCase() + word.slice(1);
+  }
+
+function exclamation(word) {
+    return word + "!!!"
+}
+
+console.log(chainMap("TodAy", lowerCase, firstUpper, exclamation))
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

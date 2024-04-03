@@ -24,8 +24,25 @@ console.log(result3);   // true
 *******************************************************************************/
 
 function mySome(array, cb) {
-    // Your code here 
-}
+
+    for (let i = 0; i < array.length; i++){
+
+       if(cb(array[i], i) === true) return true;        
+    }
+    return false
+    }
+    
+    let elIndex = function(el, i) {
+    if (el === (i)) { 
+        return true;
+    } else {
+    return false;
+    }
+    }
+    
+    
+    console.log(mySome([0,3,5,9,9], elIndex))
+    console.log(mySome([1,3,5,9,9], elIndex))
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {

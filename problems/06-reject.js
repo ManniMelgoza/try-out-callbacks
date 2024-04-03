@@ -21,9 +21,25 @@ let hasA = function(s) {
 console.log(reject(['breadth', 'GRAPH', 'depth', 'height'], hasA)); // [ 'depth', 'height' ]
 *******************************************************************************/
 
+// Use the callback funciton to reject element(s) of an array
+    // Reject words that have the letter "o"
+
 function reject(array, cb) {
-  // Your code here 
+    let newArr = [];
+    for (let el in array) {
+
+        if (!cb(array[el])) {
+             newArr.push(array[el])
+        }  
+       
+  }
+  return newArr;
 }
+
+let letterIncl = (word) => {return word.includes("o")}
+
+
+  console.log(reject(["Poop", "taco", "read"], letterIncl))
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
