@@ -28,18 +28,21 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 
 *******************************************************************************/
 //Passing array of strings
-//strings are include the letter 'e' and are all lowercase
+//strings  include the letter 'e' and are all lowercase
 
 function andSelect(array, cb1, cb2) {
 
   let newArr = [];
-  for(let el in array){
-    let val1 = cb1(array[el]);
-    if (val1 === true){
-      let val2 = cb2(val1);
-      newArr.push(val2);
-    }
+  for(let i = 0; i < array.length; i++) {
+    let val1 = cb1(array[i]);
     
+    if (val1){
+      
+      let val2 = cb2(array[i]);
+      if (val2 === true) {
+        newArr.push(array[i]);
+      }
+    }
   }
 return newArr;
 }
@@ -54,7 +57,7 @@ const lowerCase = function(word) {
 
 // console.log(includesE('Apple'));
 // console.log(lowerCase('Apple'));
-console.log(andSelect(['Apple', 'ray', 'roscO'], lowerCase, includesE));
+console.log(andSelect(['Apple', 'rey', 'roscO'], lowerCase, includesE));
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

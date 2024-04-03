@@ -17,11 +17,24 @@ mapMutator(arr2, function (el, i) {
 });
 console.log(arr2); // [ 0, 9, 20 ]
 *******************************************************************************/
+// Main funcion accepts array and callback
+// Callback functions accepts element and index
 
 function mapMutator(array, cb) {
-  // Your code here 
+
+for (let i = 0; i< array.length; i++){
+  let newEl = cb(array[i], i)
+  array.splice(0, array.length, newEl);
+
+}
+return array
 }
 
+function addElIndex(el, i) {
+return el * i
+}
+
+console.log(mapMutator([8, 9, 10], addElIndex))
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
   module.exports = mapMutator;
