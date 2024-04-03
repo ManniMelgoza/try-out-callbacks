@@ -34,38 +34,28 @@ console.log(chainMap(4, half, square));         // 4
     // passing through callback functions
 
 
+// ...callbacks turns the callbacks into
 function chainMap(val, ...callbacks) {
-  
 
-// for (let i = 0; i < val.length; i++) {
-        // let el = val[i];
-      // return callbacks(val)
-
-        // let val1 = lowerCase(val);
-        // let val2 = firstUpper(val1);
-        // let val3 = exclamation(val2)
-
-       val = lowerCase(val);
-        val =firstUpper(val);
-       return  val = exclamation(val);
-
-    // }
-
-  
-}
-  function lowerCase(word) {
-    return word.toLowerCase()
+for (let i = 0; i < callbacks.length; i++) {
+        //value = callback[index](value)
+        val = callbacks[i](val);
   }
-
-  function firstUpper(word){
-    return word[0].toUpperCase() + word.slice(1);
-  }
-
-function exclamation(word) {
-    return word + "!!!"
+  return val;
 }
+//   function lowerCase(word) {
+//     return word.toLowerCase()
+//   }
 
-console.log(chainMap("TodAy", lowerCase, firstUpper, exclamation))
+//   function firstUpper(word){
+//     return word[0].toUpperCase() + word.slice(1);
+//   }
+
+// function exclamation(word) {
+//     return word + "!!!"
+// }
+
+// console.log(chainMap("TodAy", lowerCase, firstUpper, exclamation))
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 try {
